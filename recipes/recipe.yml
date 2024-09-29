@@ -20,13 +20,29 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       # - micro
-      # - starship
+       - starship
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
+       - firefox
+       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+       - epiphany
+       - gnome-extensions
+       - gnome-calculator
+       - gnome-calendar
+       - gnome-clocks
+       - gnome-contacts
+       - gnome-console
+       - gnome-font-viewer
+       - gnome-logs
+       - gnome-maps
+       - gnome-system-monitor
+       - gnome-text-editor
+       - gnome-tour
+       - gnome-weather
+       - totem
+       - sushi
+       - snapshot
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -35,8 +51,42 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        # - org.mozilla.firefox
-        # - org.gnome.Loupe
+         - io.gitlab.librewolf-community
+         - com.github.rafostar.Clapper
+         - com.github.tchx84.Flatseal
+         - io.missioncenter.MissionCenter
+         - org.gnome.Calculator
+         - org.gnome.Calendar
+         - org.gnome.DejaDup
+         - org.gnome.Logs
+         - org.gnome.Loupe
+         - org.gnome.Loupe.HEIC
+         - org.gnome.Snapshot
+         - org.gnome.baobab
+         - org.gnome.Weather
+         - org.gnome.TextEditor
+         - org.gnome.clocks
+         - org.gnome.Characters
+         - org.gnome.Connections
+         - org.gnome.Contacts
+         - us.zoom.Zoom
+         - org.gtk.Gtk3theme.adw-gtk3
+         - org.gtk.Gtk3theme.adw-gtk3-dark
+         - org.gnome.Platform
+         - org.gnome.NautilusPreviewer
+         - org.gnome.Papers
+         - org.gnome.font-viewer
+         - org.gnome.Logs
+         - com.valvesoftware.Steam
+         - com.mojang.Minecraft
+         - com.mattjakeman.ExtensionManager
+         - app.devsuite.Ptyxis
+         - org.freedesktop.Platform.Compat.i386
+         - org.freedesktop.Platform.GL.default
+         - org.freedesktop.Platform.GL32.default
+         - org.freedesktop.Platform.ffmpeg-full
+         - org.freedesktop.Platform.openh264
+         - io.neovim.nvim
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
